@@ -49,8 +49,6 @@ body {
     font-size: 15px;
 }
 
-
-
 /*Main section*/
 .main_section {
     display: flex;
@@ -75,13 +73,14 @@ body {
     font-size: 45px;
     font-weight: 100;
 }
+
 .main_section_button_container {
     margin: 2rem 1rem;
 }
 
 .main_section_button {
     background: none;
-    border : 1px solid #e859ae;
+    border : 2px solid #e859ae;
     border-radius: 20px;
     padding: 10px 30px;
     color: #e859ae; 
@@ -113,13 +112,11 @@ body {
     animation: shadowPulse 3s infinite linear;
 }
 
-
-/*Pulse animation on hover (change to on click with JS?)*/
+/*Pulse animation on hover Whatsapp Button (change to on click with JS?)*/
 @keyframes shadowPulse {
     0% {
         box-shadow: 0 0 0 0 rgb(76, 175, 80, .7), 
         0 0 0 0 rgb(76, 175, 80, .7);
-
     }
     40% {
         box-shadow: 0 0 0 50px rgba(76, 175, 80, 0), 
@@ -127,7 +124,7 @@ body {
     }
     80% {
         box-shadow: 0 0 0 50px rgba(76, 175, 80, 0),
-        0 0 0 30pX rgba(76, 175, 80, 0);
+        0 0 0 30px rgba(76, 175, 80, 0);
     }
     100% {
         box-shadow: 0 0 0 0 rgba(76, 175, 80, 0),
