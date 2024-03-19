@@ -8,6 +8,7 @@ body {
     width: 100vw; 
     height: 100vh;  
     overflow-x: hidden;
+    font-family: 'Hebbo','Arial', sans-serif; /*Correct font?*/
 }
 
 .page__container {
@@ -22,4 +23,114 @@ body {
 
 .hero {
     background-image: linear-gradient(to left, rgb(156, 12, 161), #39065a);
+}
+
+/*FIRST SECTION*/
+
+/*Navbar*/
+.nav_container, 
+.navbar > ul {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 1rem 5rem;
+}
+
+.navbar {
+    width: 60%;
+}
+
+.nav_button > button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+
+/*Main section*/
+.main_section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+/*Main section left*/
+.main_section_image {
+    width: 30%;
+    padding-top: 4rem;
+}
+
+/*Main section right - text and buttons*/
+.main_section_right {
+    align-self: center;
+    width: 35%;
+}
+
+.main_section_text {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 100;
+}
+.main_section_button_container {
+    margin: 2rem 1rem;
+}
+
+.main_section_button {
+    background: none;
+    border : 1px solid #e859ae;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: #e859ae; 
+}
+
+.main_section_button:hover {
+    background: #e859ae;
+    color: #fff; 
+    cursor: pointer;
+}
+
+/*Whatsapp button*/
+.whatsapp_button {
+    background: #4caf50;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    padding: 25px;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+}
+
+.whatsapp_button > img {
+    width: 20px;
+}
+
+.whatsapp_button:hover {
+    cursor: pointer;
+    animation: shadowPulse 3s infinite linear;
+}
+
+
+/*Pulse animation on hover (change to on click with JS?)*/
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgb(76, 175, 80, .7), 
+        0 0 0 0 rgb(76, 175, 80, .7);
+
+    }
+    40% {
+        box-shadow: 0 0 0 50px rgba(76, 175, 80, 0), 
+        0 0 0 0 rgb(76, 175, 80, .7);
+    }
+    80% {
+        box-shadow: 0 0 0 50px rgba(76, 175, 80, 0),
+        0 0 0 30pX rgba(76, 175, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0),
+        0 0 0 30px rgba(76, 175, 80, 0);
+    }
 }
