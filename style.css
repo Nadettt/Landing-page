@@ -409,6 +409,11 @@ body::-webkit-scrollbar {
 
 /*SIXTH SECTION - Prices*/
 
+.prices {
+    padding-bottom: 4rem;
+    height: auto;
+}
+
 .prices_title {
     text-align: center;
     color: #9a0f98;
@@ -478,4 +483,28 @@ figcaption {
 
 .prices_item:hover {
     transform: scale(1.1);
+}
+
+/*SEVENTH SECTION - Prices*/
+.contact_title {
+    text-align: center;
+    color: #9a0f98;
+    padding: 4rem;
+}
+
+.contact_title:after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 5rem;
+    padding-top: 1.25rem;
+    border-bottom: 2px solid #ee4eeb;
+}
+
+/*Signup Form*/
+.signup_form_container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 35px 
 }

@@ -215,8 +215,27 @@
                 </div>
             </div>
         </section>
-        <section class="contact section__container">9</section>
-        <footer class="footer__info section__container">10</footer>
+        <section class="contact section__container">
+            <h2 class="contact_title">CONTACT US</h2>
+            <div class="signup_form_container">
+                <form action="your-server-endpoint" method="post">
+                    <label for="first-name">First Name:</label><br>
+                    <input type="text" id="first-name" name="first-name" required><br><br>
+                    
+                    <label for="last-name">Last Name:</label><br>
+                    <input type="text" id="last-name" name="last-name" required><br><br>
+            
+                    <label for="phone-number">Phone Number:</label><br>
+                    <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+            
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+        <footer class="footer__info section__container">9</footer>
     </main>
 </body>
 </html>
