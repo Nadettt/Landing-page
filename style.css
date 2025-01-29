@@ -508,3 +508,17 @@ figcaption {
     justify-content: left;
     gap: 35px 
 }
+
+.form_img_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact_img > img {
+    width: 300px;
+}
+
+.signup_form_container > form > label {
+   display: none;
+}
