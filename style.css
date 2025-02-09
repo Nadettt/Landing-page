@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 * {
     padding: 0;
     margin: 0;
@@ -22,13 +26,22 @@ body::-webkit-scrollbar {
 
 .section__container {
     background-color: #fff;
-    height: 100%;
+    padding: 50px 0;
 }
+/*section.study.section__container,
+section.robots.section__container {
+    height: -webkit-fill-available;
+    display: grid;
+}*/
 
 /*FIRST SECTION*/
 
 .hero {
     background-image: linear-gradient(to left, rgb(156, 12, 161), #39065a);
+    background-color: #fff;
+    height: -webkit-fill-available;
+    display: grid
+;
 }
 
 /*Navbar*/
@@ -62,8 +75,9 @@ body::-webkit-scrollbar {
 
 /*Main section left*/
 .main_section_image {
-    width: 30%;
-    padding-top: 4rem;
+    width: 100%;
+    height: auto;
+    max-width: 550px;
 }
 
 /*Main section right - text and buttons*/
@@ -137,12 +151,6 @@ body::-webkit-scrollbar {
 }
 
 /*SECOND SECTION - Study tracks and Robots*/
-
-.study {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #39065a);
-    height: auto;
-}
-
 .study_intro,
 .robots_title {
     text-align: center;
@@ -187,15 +195,15 @@ body::-webkit-scrollbar {
 
 .study_category_text {
     max-width: 50%;
-    max-height: 22%;
-    overflow-y: scroll;
-}
-
-.study_category_text::-webkit-scrollbar {
-    display: none;
+    text-align: center;
 }
 
 /*Robots section images*/
+.robots.section__container {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #39065a);
+    height: auto;
+}
+
 .robots_img_container {
     display: flex;
     flex-wrap: nowrap;
@@ -512,13 +520,99 @@ figcaption {
 .form_img_container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .contact_img > img {
-    width: 300px;
+    width: 400px;
 }
 
 .signup_form_container > form > label {
    display: none;
 }
+
+.form_0 {
+    display: flex;
+    gap: 40px;
+}
+
+.form_2 > textarea#message {
+    width: 400px;
+}
+
+input, textarea {
+    padding: 5px;
+    border: 1px lightgrey solid;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: #000000;
+}
+
+.form_2 > button {
+    background-image: linear-gradient(to right, rgb(171, 63, 175), #841888);
+    border : 1px solid #000000;
+    border-radius: 20px;
+    padding: 8px;
+    color: #000000; 
+    width: -webkit-fill-available;
+}
+
+/*FOOTER*/
+footer.footer__info.section__container {
+    background-color: #39065a;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+footer a,
+footer ul li:last-child {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+/*MEDIA QUERIES*/
+@media (max-width: 600px) {
+    /* Styles for screens 600px wide or smaller - Mobiles*/
+    body {
+      background-color: lightblue;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 900px) {
+    /* Styles for screens between 601px and 900px - Tablets*/
+    body {
+      background-color: lightgreen;
+    }
+  }
+
+  @media (min-width: 901px) {
+    /* Styles for screens wider than 900px - Laptops, Desktops*/
+    body {
+      background-color: lightcoral;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    /* Styles for screens 1200px and wider - Large desktop*/
+    body {
+      background-color: lightgoldenrodyellow;
+    }
+  }
+
+/*Other Common Breakpoints:*/
+
+@media (max-width: 479px) { /* For small phones */ }
+@media (min-width: 480px) and (max-width: 767px) { /* For tablets in portrait */ }
+@media (min-width: 768px) and (max-width: 1023px) { /* For tablets in landscape */ }
+@media (min-width: 1024px) and (max-width: 1279px) { /* For small laptops */ }
+@media (min-width: 1280px) { /* For large laptops and desktops */ }

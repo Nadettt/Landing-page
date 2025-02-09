@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <main class="page__container">
@@ -12,10 +13,10 @@
             <header class="nav_container">
                 <nav class="navbar">
                     <ul>
-                        <li class="nav_button"><button >ABOUT</button></li>
-                        <li class="nav_button"><button >OUR COURSES</button></li>
-                        <li class="nav_button"><button >HOW IT WORKS</button></li>
-                        <li class="nav_button"><button >CONTACT US</button></li>
+                        <li class="nav_button"><button class="scroll-btn" data-target="about">ABOUT</button></li>
+                        <li class="nav_button" data-target="ourCourses"><button>OUR COURSES</button></li>
+                        <li class="nav_button" data-target="howItWorks"><button>HOW IT WORKS</button></li>
+                        <li class="nav_button" data-target="contactUs"><button>CONTACT US</button></li>
                     </ul>
                 </nav>
                 <div class="logo">
@@ -40,12 +41,12 @@
                 </div> 
             </div>   
         </section>
-        <section class="study section__container">
+        <section id="about" class="study section__container">
             <div class="study_intro">
                 <h2 class="study_title">OUR STUDY TRACKS</h2>
                 <p class="study_text">We will tell you about our courses in the field of robotics.</p>
-            </div>
-            <div class="study_categories_container">
+           </div>
+            <div id="ourCourses" class="study_categories_container">
                 <div class="study_category">
                     <img class="study_category_image" src="/projectAssets/img/Icon 2.png" alt="human head with robot brain">
                     <p class="study_category_title">THE VISION</p>
@@ -67,6 +68,8 @@
                     <p class="study_category_text">Provide expertise that will help entrepreneurs, teachers, companies and associations develop physical products that will lead to solutions</p>
                 </div>
             </div>
+        </section>
+        <section id="ourRobots" class="robots section__container">
             <div class="robots_container">
                 <h2 class="robots_title">OUR ROBOTS</h2>
                 <div class="robots_img_container">
@@ -76,7 +79,7 @@
                 </div>
             </div>
         </section>
-        <section class="work section__container">
+        <section id="howItWorks" class="work section__container">
                 <h2 class="work_title">HOW IT WORKS</h2>
             <div class="work_categories_container">
                 <div class="work_category">
@@ -215,25 +218,22 @@
                 </div>
             </div>
         </section>
-        <section class="contact section__container">
+        <section id="contactUs" class="contact section__container">
             <h2 class="contact_title">CONTACT US</h2>
             <div class="form_img_container contact">
                 <div class="signup_form_container">
                     <form action="your-server-endpoint" method="post">
-                        <label for="first-name">First Name:</label><br>
-                        <input type="text" id="first-name" name="first-name" required><br><br>
-                        
-                        <label for="last-name">Last Name:</label><br>
-                        <input type="text" id="last-name" name="last-name" required><br><br>
-                
-                        <label for="phone-number">Phone Number:</label><br>
-                        <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
-                
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-                
-                        <button type="submit">Send</button>
-                        
+                        <div class="form_0">
+                            <div class="form_1">
+                                <input type="text" placeholder="First Name:" id="first-name" name="first-name" required><br><br>
+                                <input type="text" placeholder="Last Name:" id="last-name" name="last-name" required><br><br>
+                                <input type="tel" placeholder="Phone Number:" id="phone-number" name="phone-number" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+                            </div>
+                            <div class="form_2">
+                                <textarea id="message" placeholder="Message:" name="message" rows="4" cols="50" required></textarea><br><br>
+                                <button type="submit">Send</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             <div class="contact_img">
@@ -241,7 +241,22 @@
             </div>
         </div>
         </section>
-        <footer class="footer__info section__container">9</footer>
+        <footer class="footer__info section__container">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#ourRobots">Our robots</a></li>
+                    <li><a href="#howItWorks">How it works</a></li>
+                    <li><a href="#contactUs">Contact us</a></li>
+                </ul>
+                <ul>
+                    <li><img src="/projectAssets/img/twitter.png" alt="Clickable Image"></li>
+                    <li><img src="/projectAssets/img/youtube_2.png" alt="Clickable Image"></li>
+                    <li><img src="/projectAssets/img/facebook_2.png" alt="Clickable Image"></li>
+                </ul>
+                <ul>
+                    <li>&copy; All rights reserved</li>
+                </ul>
+        </footer>
     </main>
 </body>
 </html>
